@@ -1,18 +1,20 @@
-import type { Config } from "tailwindcss";
+import type { Config } from 'tailwindcss'
 
 export default {
-  content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
+  content: ['./src/**/*.tsx'],
   theme: {
     extend: {
+      gridTemplateColumns: {
+        app: 'minmax(18rem, 20rem) 1fr',
+      },
+
+      maxWidth: {
+        app: '700px',
+      },
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        diego: '#333',
       },
     },
   },
   plugins: [],
-} satisfies Config;
+} satisfies Config
